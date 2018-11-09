@@ -4,7 +4,7 @@ provider "aws" {
   region = "ap-south-1"
 }
 
-resource "aws_instance" "front-end" {
+resource "aws_instance" "frontend" {
   ami = "ami-0912f71e06545ad88"
   instance_type = "t2.micro"
   lifecycle {
@@ -16,11 +16,13 @@ resource "aws_instance" "backend" {
   count = 2
   ami = "ami-0912f71e06545ad88"
   instance_type = "t2.micro"
-  timeouts {
-    create = "60m"
-    delete = "2h"
-  }
 }
 
+output "frontend ip" {
+  value = "${aws_instance.frontend.public_ip}"
+}
 
+output "backend ips" {
+  value = "${aws_instance.backend.*.public_ip}"
+}
 

@@ -1,12 +1,12 @@
 provider "aws" {
-  access_key = "AKIAIP6WKV2ECB4TLKVA"
-  secret_key = "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"
+  access_key = "AKIAI5KTAM7RKFNPTAJA"
+  secret_key = "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"
   region = "ap-south-1"
 }
 
 provider "aws" {
-  access_key = "AKIAIP6WKV2ECB4TLKVA"
-  secret_key = "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"
+  access_key = "AKIAI5KTAM7RKFNPTAJA"
+  secret_key = "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"
   alias = "ap-southeast-1"
   region = "ap-southeast-1"
 }
