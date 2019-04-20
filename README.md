@@ -1,2 +1,3 @@
 # terraform
-config files for terraform deployment
+
+This repository contains terraform templates for deploying EC2 instances on AWS.
